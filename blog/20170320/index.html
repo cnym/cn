@@ -6,17 +6,16 @@
 	<link rel="stylesheet" href="../../css/normalize.css" type="text/css" >
 	<style>
 		body {
-			font: 300 16px/20px "微软雅黑", "Minion Pro", "Palatino", "Hoefler Text", serif, "Times New Roman";
+			font: 300 15px/20px "微软雅黑", "Minion Pro", "Palatino", "Hoefler Text", serif, "Times New Roman";
 			color: #333;
 		}
 		.main {
 			width: 960px;
-			margin: 20px auto 50px;
+			margin: 30px auto;
 		}
 		ol.upper-roman,
 		ol.lower-roman,
-		ol.decimal,
-		ol.disc {
+		ol.decimal {
 			margin-left: 20px;
 		}
 		ol.upper-roman li,
@@ -42,20 +41,35 @@
 			display: block;
 			margin: 10px auto;
 		}
-		h1, h2, h3, h4 {
+		.blog-name {
+			color: #3A96FF;
+		}
+		.blog-menu {
+			margin-left: 40px;
+		}
+		h1, h3, h4 {
 			color: #000;
 			line-height: 50px;
 		}
 		h5, h6 {
 			line-height: 35px;
 		}
+		h4 {
+			font-size: 16px;
+		}
+		h5 {
+			font-size: 15px;
+		}
 		code {
 			font-family: "Palatino", "microsoft yahei";
 			line-height: 22px;
 			font-size: 12px;
 		}
-		.margin-left10 {
-			margin-left: 10px;
+		p {
+			text-indent: 20px;
+		}
+		.margin-left15 {
+			margin-left: 15px;
 		}
 		.margin-bottom20 {
 			margin-bottom: 20px;
@@ -64,7 +78,8 @@
 </head>
 <body>
 <section class="main">
-	<ol class="disc margin-bottom20">
+	<h2 class="blog-name margin-bottom20">CSS Grid Layout</h2>
+	<ol class="disc margin-bottom20 blog-menu">
 		<li>浏览器支持情况</li>
 		<li>用grid实现布局</li>
 		<li>flex 布局</li>
@@ -90,7 +105,7 @@
 			<ol class="decimal">
 				<li>
 					<h5>实现效果：</h5>
-					<p><a href="http://codepen.io/y_y/pen/pPgjGw">实现效果1</a><a href="https://codepen.io/y_y/pen/ybMNZz" class="margin-left10">实现效果2</a></p>
+					<p><a href="http://codepen.io/y_y/pen/pPgjGw">实现效果1</a><a href="https://codepen.io/y_y/pen/ybMNZz" class="margin-left15">实现效果2</a></p>
 				</li>
 				<li>
 					<h5>实现说明：</h5>
