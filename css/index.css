@@ -1,0 +1,74 @@
+body {
+	padding: 60px 100px 0 60px;
+	font: 300 14px/20px "微软雅黑", "Minion Pro", "Palatino", "Hoefler Text", serif, "Times New Roman";
+	color: #333;
+}
+a {
+	text-decoration: underline;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+}
+h1 {
+	border-left: 40px solid #b9cc3d;
+	padding-left: 20px;
+	margin-left: -60px;
+	line-height: 40px;
+	color: #638ec3;
+	font-weight: bold;
+}
+.logo-img {
+	border-radius: 6px;
+}
+.contact li {
+	line-height: 30px;
+}
+.contact i,
+.contact a {
+	color: #989009;
+	vertical-align: middle;
+}
+.contact i {
+	font-size: 20px;
+}
+.contact a {
+	margin-left: 6px;
+}
+.projects li:first-child {
+	margin-top: 0;
+}
+.projects li {
+	margin-top: 15px;
+}
+.projects a {
+	color: #989009;
+}
+.blog li:first-child {
+	margin-top: 0;
+}
+.blog li {
+	margin-top: 15px;
+}
+.blog .title {
+	margin-right: 12px;
+	color: #3A96FF;
+}
+.blog .date {
+	color: #aaaaaa;
+	font-size: 12px;
+}
+.blog .title,
+.blog .date {
+	letter-spacing: 2px;
+}
+.blog .info {
+	margin-top: 4px;
+}
+.blog-more {
+	text-decoration: none;
+	color: #989009;
+	margin-top: 20px;
+}
+.blog-more:hover {
+	text-decoration: underline;
+}

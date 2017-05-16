@@ -1,0 +1,47 @@
+.margin-top10 {
+	margin-top: 10px;
+}
+.margin-top20 {
+	margin-top: 20px;
+}
+.margin-top30 {
+	margin-top: 30px;
+}
+.margin-top40 {
+	margin-top: 40px;
+}
+.margin-bottom20 {
+	margin-bottom: 20px;
+}
+.margin-right10 {
+	margin-right: 10px;
+}
+.margin-right15 {
+	margin-right: 15px;
+}
+.margin-left10 {
+	margin-left: 10px;
+}
+.padding-left10 {
+	padding-left: 10px;
+}
+.padding-top12 {
+	padding-top: 12px;
+}
+.padding-top20 {
+	padding-top: 20px;
+}
+
+.clearfix:after {
+	content: '';
+	display: block;
+	overflow: hidden;
+	clear: both;
+}
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+

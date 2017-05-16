@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS Grid Layout</title>
+	<link rel="stylesheet" href="../../css/normalize.css" type="text/css" >
+	<style>
+		body {
+			font: 300 16px/20px "微软雅黑", "Minion Pro", "Palatino", "Hoefler Text", serif, "Times New Roman";
+			color: #333;
+		}
+		.main {
+			width: 960px;
+			margin: 20px auto 50px;
+		}
+		ol.upper-roman,
+		ol.lower-roman,
+		ol.decimal,
+		ol.disc {
+			margin-left: 20px;
+		}
+		ol.upper-roman li,
+		ol.lower-roman li,
+		ol.decimal li {
+			padding-left: 20px;
+		}
+		ol.upper-roman li {
+			list-style-type: upper-roman;
+		}
+		ol.decimal li {
+			list-style-type: decimal;
+		}
+		ol.lower-roman li {
+			list-style-type: lower-roman;
+		}
+		ol.disc li {
+			list-style-type: disc;
+			line-height: 25px;
+			font-weight: bold;
+		}
+		img {
+			display: block;
+			margin: 10px auto;
+		}
+		h1, h2, h3, h4 {
+			color: #000;
+			line-height: 50px;
+		}
+		h5, h6 {
+			line-height: 35px;
+		}
+		code {
+			font-family: "Palatino", "microsoft yahei";
+			line-height: 22px;
+			font-size: 12px;
+		}
+		.margin-left10 {
+			margin-left: 10px;
+		}
+		.margin-bottom20 {
+			margin-bottom: 20px;
+		}
+	</style>
+</head>
+<body>
+<section class="main">
+	<ol class="disc margin-bottom20">
+		<li>浏览器支持情况</li>
+		<li>用grid实现布局</li>
+		<li>flex 布局</li>
+	</ol>
+	<p class="margin-bottom20">网格布局就是使用网格概念来布局内容的方法，为作者提供一种机制，使用一组可预测的大小将可用空间分配为列和行。</p>
+	<ol class="upper-roman">
+		<li>
+			<h4>浏览器支持情况</h4>
+			<ol class="decimal">
+				<li>
+					<h5>目前很多主流浏览器都还不支持grid网格布局，在 https://caniuse.com/#search=grid 查看支持情况：</h5>
+					<img src="./clipboard.png" alt="" width="800" >
+				</li>
+				<li>
+					<h5>以chrome浏览器为例介绍手动启用的方法。（还有部分浏览器也可以手动启用）</h5>
+					<img src="./clipboard2.png" alt="" width="650" >
+					点击启用“实验性网络平台功能”，重启浏览器后生效
+				</li>
+			</ol>
+		</li>
+		<li>
+			<h4>用grid实现布局</h4>
+			<ol class="decimal">
+				<li>
+					<h5>实现效果：</h5>
+					<p><a href="http://codepen.io/y_y/pen/pPgjGw">实现效果1</a><a href="https://codepen.io/y_y/pen/ybMNZz" class="margin-left10">实现效果2</a></p>
+				</li>
+				<li>
+					<h5>实现说明：</h5>
+					<ol class="lower-roman">
+						<li>
+							<h5>可以为 font 按顺序设置如下属性：</h5>
+							<code>font-style font-variant font-weight font-size/line-height font-family</code>
+						</li>
+						<li>
+							<h5>可在父元素上设置的属性</h5>
+							<code>
+								grid-template-columns: auto; // 每列的宽度自适应，均分可用宽度 <br/>
+								grid-template-rows: auto; // 每列的高度自适应，均分可用高度 <br/>
+								grid-template-areas: <br/>
+								"header header header header" // 网格的第一行 <br/>
+								"navigation content contentSide sidebar" // 网格的第二行 <br/>
+								"footer footer footer footer"; // 网格的第三行
+							</code>
+						</li>
+						<li>
+							<h5>可在父元素上设置的属性</h5>
+							<code>
+								grid-row-start: 2; <br />
+								grid-row-end: 3; <br />
+								grid-column-start: 1; <br />
+								grid-column-end: 2;  // 网格线的编号，绘制网格 <br />
+								grid-area: header; // 网格命名
+							</code>
+						</li>
+						<li>
+							<h5>备注</h5>
+							<code>
+								1fr :  剩余的空间，是多个网格就按照某种比例来分配剩余的空间 <br/>
+								grid-template-areas: 每一行的列数不一致时，布局会异常
+							</code>
+						</li>
+						<li>
+							<h5>在线构造布局，实时生成css</h5>
+							<a href="http://griddy.io/">http://griddy.io/</a>
+						</li>
+					</ol>
+				</li>
+			</ol>
+		</li>
+		<li>
+			<h4>flex 布局</h4>
+			<img src="./clipboard3.png" alt="" width="800" >
+			<p>从上图可以清晰看到，绝大多数浏览器对flex属性具有良好的兼容性，在很多情况下可以很方便的对元素进行布局。但是，在对网页进行整体布局时它并不是最佳的选择，一般是使用浮动或者内联元素实现，这并不是创造浮动和内联元素的初衷。目前，我们为了实现整体布局，不得不使用这些hack。网格布局的诞生，我们可以用它的一些基础属性来实现一些标准布局。</p>
+		</li>
+	</ol>
+</section>
+</body>
+</html>
