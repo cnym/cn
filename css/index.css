@@ -1,10 +1,7 @@
 body {
 	padding: 60px 100px 0 60px;
-	font: 300 14px/20px "微软雅黑", "Minion Pro", "Palatino", "Hoefler Text", serif, "Times New Roman";
+	font: 300 16px/22px Tahoma,Helvetica,Arial,'宋体',sans-serif;
 	color: #333;
-}
-a {
-	text-decoration: underline;
 }
 h1, h2, h3, h4, h5, h6 {
 	font-weight: normal;
@@ -14,7 +11,7 @@ h1 {
 	padding-left: 20px;
 	margin-left: -60px;
 	line-height: 40px;
-	color: #638ec3;
+	color: #337ab7;
 	font-weight: bold;
 }
 .logo-img {
@@ -51,15 +48,16 @@ h1 {
 }
 .blog .title {
 	margin-right: 12px;
-	color: #3A96FF;
+	color: #337ab7;
+	text-decoration: none;
+}
+.blog .title:hover {
+	color: #337ab7;
+	text-decoration: underline;
 }
 .blog .date {
-	color: #aaaaaa;
+	color: #ccc;
 	font-size: 12px;
-}
-.blog .title,
-.blog .date {
-	letter-spacing: 2px;
 }
 .blog .info {
 	margin-top: 4px;
