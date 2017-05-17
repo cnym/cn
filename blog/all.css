@@ -1,3 +1,11 @@
+/*
+一级标题，也就是文章标题：h1表示
+二级标题，h2表示，二级与三级之间不额外再留空白
+三级标题，用ol class decimal 表示，三级之间不留太多空白
+p 标签上 margin-bottom 20px
+.text-indent 20px
+pre margin 5px 0
+*/
 body {
 	font: 400 16px/22px Tahoma,Helvetica,Arial,'宋体',sans-serif;
 	color: #404040;
@@ -47,7 +55,7 @@ pre {
 p {
 	margin-bottom: 20px;
 }
-p.text-indent {
+.text-indent {
 	text-indent: 20px;
 }
 .margin-left15 {
@@ -63,4 +71,16 @@ a {
 }
 a:hover {
 	text-decoration: underline;
+}
+.img-inline {
+	text-align: center;
+}
+.img-inline img {
+	display: inline-block;
+}
+.clearfix:after {
+	content: '';
+	display: block;
+	overflow: hidden;
+	clear: both;
 }
