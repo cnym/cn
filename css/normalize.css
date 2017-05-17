@@ -472,3 +472,9 @@ q:before, q:after {
 a {
 	color: #333;
 }
+a:hover,
+a:active,
+a:link,
+a:visited {
+	outline: none;
+}
