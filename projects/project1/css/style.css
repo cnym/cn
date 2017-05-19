@@ -593,6 +593,9 @@ body {
 	body {
 		font-size: 14px;
 	}
+	.word-no-wrap th, .word-no-wrap td {
+		white-space: nowrap;
+	}
 	.nav-body,
 	.banner-body,
 	.main,
@@ -658,6 +661,9 @@ body {
 	.footer-title img {
 		margin:5px 0;
 	}
+	.footer-code-img {
+		width: auto;
+	}
 	.footer-code-img img {
 		margin: 0;
 		height: 104px;
@@ -705,10 +711,13 @@ body {
 	.my-video2-dimensions {
 		width: auto;
 	}
+	.banner-info h3 {
+		font-size: 16px;
+	}
 }
 @media screen and (max-width: 375px) {
 	.nav-logo img {
-		display: none;
+		width: 70px;
 	}
 	.font-size1 {
 		font-size: 30px;
@@ -716,6 +725,11 @@ body {
 	.font-size2 {
 		font-size: 20px;
 	}
+    .big-button.fixed-width {
+	    padding: 8px;
+	    margin: 5px;
+	    width: 120px;
+    }
 }
 
 
