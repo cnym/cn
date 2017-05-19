@@ -695,6 +695,7 @@ body {
 	}
 	.card-ul li {
 		float: left;
+		width: 50%;
 	}
 	.card1-video-play {
 		margin-right: 10px;
@@ -730,6 +731,20 @@ body {
 	    margin: 5px;
 	    width: 120px;
     }
+	.card1-title a {
+		padding: 10px;
+	}
+}
+@media screen and (max-width: 325px) {
+	.nav-logo img {
+		display: none;
+	}
+	.download-ul .download-title {
+		width: 75%;
+	}
+	.card1-title a {
+		padding: 10px 2px;
+	}
 }
 
 
