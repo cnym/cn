@@ -754,6 +754,7 @@ body {
 	}
 	.main-info td {
 		padding: 5px;
+		text-align: center;
 	}
 	.item-title {
 		height: 50px;
