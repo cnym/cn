@@ -611,13 +611,17 @@ body {
 	    display: none;
     }
     .banner-title {
-	    width: 52%;
+	    width: 100%;
+	    padding: 15px;
     }
     .banner-info {
 	    width: 48%;
     }
 	.banner-title a {
 		font-size: 14px;
+	}
+	.banner-title h2 {
+		padding: 10px 0;
 	}
     .font-size1 {
 	    font-size: 40px;
@@ -674,6 +678,11 @@ body {
 	.footer-link h4 {
 		margin-bottom: 5px;
 	}
+	.banner-info {
+		width: 100%;
+		float: none;
+		padding: 5px 10px;
+	}
 	.banner-info li {
 		line-height: 16px;
 	}
@@ -712,8 +721,12 @@ body {
 	.my-video2-dimensions {
 		width: auto;
 	}
+	.banner {
+		height: auto;
+	}
 	.banner-info h3 {
 		font-size: 16px;
+		padding-bottom: 10px;
 	}
 	.detail-container1 h2 {
 		line-height: 30px;
@@ -732,6 +745,7 @@ body {
 		right: 0;
 		left: auto;
 	}
+ 
 }
 @media screen and (max-width: 375px) {
 	.nav-logo img {
