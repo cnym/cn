@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>初级、中级、高级审计师考试网</title>
+	<link rel="stylesheet" href="css/basic.css" type="text/css">
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+<!--导航-->
+<div class="nav" id="navigator">
+	<div class="nav-body clearfix">
+		<div class="nav-logo fl">
+			<div class="table-cell">
+				<img src="./images/u124.png" alt="logo" title="logo" width="100" />
+				<span class="logo-title">审计师考试</span>
+			</div>
+		</div>
+		<ul class="nav-link fl clearfix">
+			<li><a href="index.html" target="_blank">首页</a></li>
+			<li><a href="bkzn.html" target="_blank">报考指南</a></li>
+			<li><a href="zlxz.html" target="_blank">资料下载</a></li>
+			<li class="download-li">
+				<a href="javascript:void(0)" target="_blank">
+					手机题库下载
+					<img src="./images/xzapp.png" alt="download" title="download" class="download-img" />
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<!--banner 高度固定，要求背景图片足够大-->
+<div class="banner">
+	<div class="banner-center">
+		<div class="banner-body clearfix">
+			<div class="fl banner-title">
+				<h1 class="font-size1">2017年审计师考试</h1>
+				<h2 class="font-size2 color1">备考咨询中心</h2>
+				<p>
+					<a href="bkzn.html" class="big-button fixed-width" target="_blank">报考条件及流程</a>
+					<a href="http://wpa.qq.com/msgrd?v=3&uin=1982090010&site=qq&menu=yes" target="_blank" class="big-button fixed-width margin-left60">
+						在线咨询
+					</a>
+				
+				</p>
+			</div>
+			
+			<div class="fr banner-info">
+				<h3>审计师考试常见问题</h3>
+				<ul>
+					<li><span class="bg-color">1</span><a href="cjwt1.html" target="_blank">什么是审计？</a></li>
+					<li><span class="bg-color">2</span><a href="cjwt2.html" target="_blank">初级审计师的报名条件是什么？</a></li>
+					<li><span class="bg-color">3</span><a href="cjwt3.html" target="_blank">中级审计师的报名条件是什么？</a></li>
+					<li><span class="bg-color">4</span><a href="cjwt4.html" target="_blank">中级审计师的报名条件中的"满"字怎么计算？</a></li>
+					<li><span>5</span><a href="cjwt5.html" target="_blank">助审和审计师的教材有什么特点？</a></li>
+					<li><span>6</span><a href="cjwt6.html" target="_blank">会计师考试与审计师考试哪个更难？原因在哪里？</a></li>
+					<li><span>7</span><a href="cjwt7.html" target="_blank"> 有审计证书能不能干会计？</a></li>
+					<li><span>8</span><a href="cjwt8.html" target="_blank">获取证书后的待遇如何？</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!--主体-->
+<div class="main">
+	<!--图文详情-->
+	<div class="container-border margin-top20 detail-container1">
+		<p>成都环宇知了科技有限公司是由一支年轻且具有互联网模式创新思维的团队创建，公司立志为参与职称考试的考生提供便捷有效的学习方案，履行我们成为用户职业生涯忠实伴侣的承诺。公司和多家教育机构、名校名师有深度合作，旗下品牌"之了教育"产品覆盖外语、建筑、财会、医学等重大领域，且具有一定的市场占有率，市场反应良好。一站式解决听课、做题、交流等考试需求！  </p>
+		<p>【之了课堂内容】</p>
+		<p>之了课堂主要覆盖考试为金融类,工程类,财会类,医药卫生类,资格类。</p>
+		<p>金融类：基金从业,证券从业,银行从业,期货从业；</p>
+		<p>工程类：一建,一级建造师,二建,二级建造师,造价师,注册造价工程师,注册安全工程师,注安,电气师,注册电气工程师,招标师,消防工程师,一级消防工程师,二级消防工程师；</p>
+		<p>财会类：会计,会计从业,会计证,会计职称,初级会计师,中级会计师,注册会计师,经济师,初级经济师,中级经济师,税务师；审计师</p>
+		<p>医学类：执业药师,执业医师,执业护士,卫生资格；</p>
+		<p>资格类：职称英语,教师资格； </p>
+	</div>
+</div>
+<!--footer 底部-->
+<iframe src="./footer.html" frameborder="0" width="100%" height="220px" scrolling="no" marginheight="0" class="margin-top20"></iframe>
+<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript">
+	window.onload = function () {
+		//滚动页面时改变导航条的透明度
+		var navigator = document.getElementById('navigator');
+		var last_known_scroll_position = 0;
+		var ticking = false;
+		$(document).scroll(function () {
+			last_known_scroll_position = $(document).scrollTop();
+			if (!ticking) {
+				window.requestAnimationFrame(function() {
+					controlNavOpacity(last_known_scroll_position);
+					ticking = false;
+				});
+			}
+			ticking = true;
+		})
+		function controlNavOpacity (scrollY) {
+			if (scrollY >= 50 && !$(navigator).hasClass('opacity')) {
+				$(navigator).addClass('opacity')
+			} else if (scrollY < 50 && $(navigator).hasClass('opacity')) {
+				$(navigator).removeClass('opacity')
+			}
+		}
+	}
+</script>
+</body>
+</html>
