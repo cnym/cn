@@ -744,6 +744,7 @@ body {
 	.download-li .download-img {
 		right: 0;
 		left: auto;
+		width: 240px;
 	}
 	.item-title .title {
 		font-size: 16px;
