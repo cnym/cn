@@ -715,6 +715,19 @@ body {
 	.banner-info h3 {
 		font-size: 16px;
 	}
+	.detail-container1 h2 {
+		line-height: 30px;
+		padding: 10px 0;
+	}
+	.detail-container1 li {
+		margin-left: 0;
+	}
+	.detail-container1 p {
+		text-indent: 0;
+	}
+	.detail-container1 {
+		padding-top: 10px;
+	}
 }
 @media screen and (max-width: 375px) {
 	.nav-logo img {
