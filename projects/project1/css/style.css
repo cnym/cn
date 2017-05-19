@@ -728,6 +728,10 @@ body {
 	.detail-container1 {
 		padding-top: 10px;
 	}
+	.download-li .download-img {
+		right: 0;
+		left: auto;
+	}
 }
 @media screen and (max-width: 375px) {
 	.nav-logo img {
