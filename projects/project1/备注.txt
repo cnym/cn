@@ -1,0 +1,20 @@
+﻿1、tree.js 文件中 zNodes1 和 zNodes2 两个变量是课程目录，可自行编辑。默认展开所有章节
+2、进入网页，视频默认不自动播放，可以在 page.js 中打开，那行代码注释掉了
+3、page1.html 中有几个卡片切换，要求卡片的数量和顺序与对应的容器的数量和顺序一致，也就是说每个卡片要对应一个容器且顺序一致
+4、进入网页，在不手动点击播放哪个课程时，默认是播放的第一章第一节，html结构中内置的播放源和视频封面跟第一章第一节的一样，这个节点也会处于选中的状态（文字灰色，加上了下划线）。
+   也可以不默认播放第一章第一节，取消 page.js 中的
+   $("#treeDemo1_2_a").addClass("curSelectedNode");//默认播放第二个节点的视频即id为11的视频 和
+   $("#treeDemo2_2_a").addClass("curSelectedNode");//默认播放第二个节点的视频即id为11的视频 即可
+5、在卡片切换过程中，非当前卡片的其他播放将被暂停
+
+
+成都环宇知了科技有限公司
+Copyright©2016-2017 zlketang.com 版权所有 蜀ICP备16018498号
+
+
+
+
+2017-05-18备注
+bkzn.html -> bkznNew.html
+bkzn2.html -> bkzn2New.html
+cjwt2.html -> cjwt2New.html
