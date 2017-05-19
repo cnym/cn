@@ -660,6 +660,7 @@ body {
 		float: none;
 		margin-bottom: 5px;
 		padding-right: 0;
+		word-break: break-all;
 	}
 	.footer-title img {
 		margin:5px 0;
@@ -669,7 +670,7 @@ body {
 	}
 	.footer-code-img img {
 		margin: 0;
-		height: 104px;
+		width: 100px;
 	}
 	.footer-link {
 		margin-top: 10px;
