@@ -1,5 +1,5 @@
 body {
-	background-color: #f5f5f5;
+	background-color: #ebebeb;
 	color: #333;
 }
 a,
@@ -11,11 +11,11 @@ h1 {
 	margin: 0;
 }
 .banner {
-	padding: 60px 0 20px;
+	padding: 80px 0 20px;
 	color: #fff;
 }
 .banner h1 {
-	margin-bottom: 40px;
+	margin-bottom: 50px;
 }
 .banner ul {
 	margin-bottom: 0;
@@ -23,8 +23,9 @@ h1 {
 .banner ul a {
 	display: block;
 	color: #fff;
-	padding: 8px 16px;
+	padding: 5px 10px;
 	border: 1px solid;
+	border-radius: 2px;
 }
 .body-default .banner ul a:hover {
 	color: #333;
@@ -43,8 +44,14 @@ h1 {
 	padding: 18px 20px;
 	display: inline-block;
 }
+.main a:hover {
+	text-decoration: underline;
+}
 .main a.btn-default {
 	padding: 7px 12px;
+}
+.main a.btn-default:hover {
+	text-decoration: none;
 }
 .pager {
 	margin: 35px 0;
@@ -60,9 +67,12 @@ h1 {
 }
 .artical h4 {
 	line-height: 24px;
+	-ms-word-break: break-all;
+	word-break: break-all;
 }
 .artical h2 small {
-	font-size: 50%;
+	font-size: 48%;
+	color: #aaa;
 }
 .artical-img {
 	width: 100%;
@@ -73,6 +83,7 @@ h1 {
 }
 .artical hr {
 	margin: 30px 0 20px;
+	border-top: 1px solid #ebebeb;
 }
 .sidebar-bg {
 	background-color: #fff;
@@ -164,6 +175,9 @@ h1 {
 .body-style1 .navbar a:hover {
 	color: #569c94;
 }
+.artical h2 small a {
+	color: #569c94;
+}
 .body-style1 .main .sidebar a {
 	color: #569c94;
 }
@@ -188,4 +202,57 @@ h1 {
 	background-color: #569c94;
 	color: #fff;
 	border: 1px solid #569c94;
+}
+.body-style1 .main a.btn-default:hover {
+	background-color: #fff;
+	color: #333;
+}
+
+
+/*样式2 bg f4645f*/
+.body-style2 {
+	font-size: 14px;
+	font-family: "Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","WenQuanYi Micro Hei","Microsoft YaHei UI","Microsoft YaHei",sans-serif;
+}
+.body-style2 .banner {
+	background-color: #f4645f;
+}
+.body-style2 .banner ul a {
+	border-color: #f1362f;
+	background-color: inherit;
+}
+.body-style2 .navbar a:hover {
+	color: #f4645f;
+}
+.artical h2 small a {
+	color: #f4645f;
+}
+.body-style2 .main .sidebar a {
+	color: #f4645f;
+}
+.body-style2 .sidebar .title span {
+	border-bottom: 1px solid #f4645f;
+}
+.body-style2 a.hover-color:hover {
+	color: #f4645f;
+}
+.body-style2 a.hover-border-bg-color:hover {
+	border-color: #f4645f;
+	color: #fff;
+	background-color: #f4645f;
+}
+.body-style2 a.hover-underline:hover {
+	text-decoration: underline;
+}
+.body-style2 .footer .sidebar a.ellipsis:hover {
+	border: 1px solid #f4645f;
+}
+.body-style2 .main a.btn-default {
+	background-color: #f4645f;
+	color: #fff;
+	border: 1px solid #f4645f;
+}
+.body-style2 .main a.btn-default:hover {
+	background-color: #fff;
+	color: #333;
 }
