@@ -56,6 +56,9 @@ h1 {
 .pager {
 	margin: 35px 0;
 }
+.pager li > a, .pager li > span {
+	border-radius: 0;
+}
 .artical {
 	padding: 35px;
 	margin-bottom: 35px;
@@ -76,7 +79,7 @@ h1 {
 }
 .artical-img {
 	width: 100%;
-	margin: 30px 0;
+	margin: 20px 0;
 }
 .artical .btn {
 	margin-top: 30px;
@@ -103,7 +106,7 @@ h1 {
 	margin-bottom: -1px;
 }
 .sidebar p {
-	line-height: 26px;
+	line-height: 24px;
 }
 .sidebar ul {
 	padding-left: 0;
@@ -132,6 +135,10 @@ h1 {
 .footer .sidebar {
 	margin-bottom: 0;
 	color: #fdfdfd;
+	padding: 20px 30px;
+}
+.footer .sidebar .title {
+	border-bottom: 1px solid #333;
 }
 .footer-bottom,
 .footer-bottom a {
@@ -155,15 +162,45 @@ h1 {
 }
 .footer-bottom {
 	background-color: #111;
-	padding: 40px 0;
+	padding: 30px 0;
 }
 
 
 
+/*切换网站风格颜色*/
+.color-box {
+	position: fixed;
+	top: 100px;
+	left: 20px;
+	background-color: #fff;
+	margin: 0;
+	padding: 0;
+}
+.color-box li {
+	width: 20px;
+	height: 20px;
+	margin: 5px;
+	list-style: none;
+	border-radius: 3px;
+}
+.bg-color1 {
+	background-color: #6ac2b8;
+}
+.bg-color2 {
+	background-color: #f4645f;
+}
+
 /*样式1*/
 .body-style1 {
 	font-size: 14px;
-	font-family:"Microsoft Yahei",Verdana,Simsun,"Segoe UI Web Light","Segoe UI Light","Segoe UI Web Regular","Segoe UI","Segoe UI Symbol","Helvetica Neue",Arial
+	font-family:"Microsoft Yahei",Verdana,Simsun,"Segoe UI Web Light","Segoe UI Light","Segoe UI Web Regular","Segoe UI","Segoe UI Symbol","Helvetica Neue",Arial;
+}
+.body-style1 * {
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear ;
+	-ms-transition: all 0.2s linear ;
+	-o-transition: all 0.2s linear ;
+	transition: all 0.2s linear ;
 }
 .body-style1 .banner {
 	background-color: #6ac2b8;
@@ -207,12 +244,22 @@ h1 {
 	background-color: #fff;
 	color: #333;
 }
+.body-style1 .pagination > li > a, .body-style1 .pagination > li > span {
+	color: #569c94;
+}
 
 
 /*样式2 bg f4645f*/
 .body-style2 {
 	font-size: 14px;
 	font-family: "Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","WenQuanYi Micro Hei","Microsoft YaHei UI","Microsoft YaHei",sans-serif;
+}
+.body-style2 * {
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear ;
+	-ms-transition: all 0.2s linear ;
+	-o-transition: all 0.2s linear ;
+	transition: all 0.2s linear ;
 }
 .body-style2 .banner {
 	background-color: #f4645f;
@@ -255,4 +302,7 @@ h1 {
 .body-style2 .main a.btn-default:hover {
 	background-color: #fff;
 	color: #333;
+}
+.body-style2 .pagination > li > a, .body-style2 .pagination > li > span {
+	color: #f4645f;
 }
