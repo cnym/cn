@@ -1,0 +1,61 @@
+/*样式2*/
+.body-style2 {
+	font-size: 14px;
+	font-family: "Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","WenQuanYi Micro Hei","Microsoft YaHei UI","Microsoft YaHei",sans-serif;
+}
+.body-style2 * {
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear ;
+	-ms-transition: all 0.2s linear ;
+	-o-transition: all 0.2s linear ;
+	transition: all 0.2s linear ;
+}
+.body-style2 .banner {
+	background-color: #f4645f;
+}
+.body-style2 .banner ul a {
+	border-color: #f1362f;
+	background-color: inherit;
+}
+.body-style2 .navbar a:hover {
+	color: #f4645f;
+}
+.body-style2 .artical h2 small a {
+	color: #f4645f;
+}
+.body-style2 .main .sidebar a {
+	color: #f4645f;
+}
+.body-style2 .sidebar .title span {
+	border-bottom: 1px solid #f4645f;
+}
+.body-style2 a.hover-color:hover {
+	color: #f4645f;
+}
+.body-style2 a.hover-border-bg-color:hover {
+	border-color: #f4645f;
+	color: #fff;
+	background-color: #f4645f;
+}
+.body-style2 a.hover-underline:hover {
+	text-decoration: underline;
+}
+.body-style2 .footer .sidebar a.ellipsis:hover {
+	border: 1px solid #f4645f;
+}
+.body-style2 .main a.btn-default {
+	background-color: #f4645f;
+	color: #fff;
+	border: 1px solid #f4645f;
+}
+.body-style2 .main a.btn-default:hover {
+	background-color: #fff;
+	color: #333;
+}
+.body-style2 .main .sidebar a.btn-normal:hover {
+	background-color: #f4645f;
+	border-color: #f4645f;
+}
+.body-style2 .pagination > li > a, .body-style2 .pagination > li > span {
+	color: #f4645f;
+}

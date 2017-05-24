@@ -1,1 +1,3 @@
 .idea
+node_modules
+/projects/project2/gulpfile.js
