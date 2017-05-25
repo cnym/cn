@@ -10,6 +10,12 @@
 	-o-transition: all 0.2s linear ;
 	transition: all 0.2s linear ;
 }
+.body-style2 *::selection {
+	background-color: rgba(244, 100, 95, 0.5);
+}
+.body-style2 *::-moz-selection {
+	background-color: rgba(244, 100, 95, 0.5);
+}
 .body-style2 .banner {
 	background-color: #f4645f;
 }
@@ -19,6 +25,17 @@
 }
 .body-style2 .navbar a:hover {
 	color: #f4645f;
+}
+.body-style2 .navbar-inverse .navbar-collapse {
+	border-color: #f4645f;
+}
+.body-style2 .navbar-inverse .navbar-toggle,
+.body-style2 .navbar-inverse .navbar-toggle:hover {
+	border-color: #f4645f;
+	background-color: #fff;
+}
+.body-style2 .navbar-inverse .navbar-toggle .icon-bar {
+	background-color: #f4645f;
 }
 .body-style2 .artical h2 small a {
 	color: #f4645f;
