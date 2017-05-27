@@ -16,6 +16,7 @@
 		ul{ border-top:1px solid #999; }
 		li{ padding: 1em 0; text-align: center; border-bottom: 1px solid #999;-webkit-tap-highlight-color: #000;}
 		#active li:active{ background: #f0f0f0 }
+		#active2 li:active{ background: #f0f0f0 }
 		
 		[data-touch]{}
 		[data-touch].active{ background: #f0f0f0 }
@@ -34,21 +35,34 @@
 		</li>
 	</ul>
 </section>
-<section>
-	<h2>touch事件</h2>
-	<ul id="touch">
-		<li data-touch="true">
-			点我
-		</li>
-		<li data-touch="true">
-			点我
-		</li>
-	</ul>
-</section>
+<div class="touchEvent">
+	<section>
+		<h2>:active ios</h2>
+		<ul id="active2">
+			<li>
+				点我
+			</li>
+			<li>
+				点我
+			</li>
+		</ul>
+	</section>
+	<section>
+		<h2>touch事件</h2>
+		<ul id="touch">
+			<li data-touch="true">
+				点我
+			</li>
+			<li data-touch="true">
+				点我
+			</li>
+		</ul>
+	</section>
+</div>
 <script>
 	window.onload = function () {
 		var test = document.querySelector('.test');
-		var target_add = document.querySelector('#touch');
+		var target_add = document.querySelector('.touchEvent');
 			target_add.addEventListener('touchstart', function(e){
 				var target = e.target
 				test.innerHTML = target.dataset.touch;
