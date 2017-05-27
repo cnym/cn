@@ -48,14 +48,15 @@
 <script>
 	window.onload = function () {
 		var test = document.querySelector('.test');
-			document.body.addEventListener('touchstart', function(e){
+		var target_add = document.querySelector('#touch');
+			target_add.addEventListener('touchstart', function(e){
 				var target = e.target
 				test.innerHTML = target.dataset.touch;
 				if(target.dataset.touch === 'true'){
 					target.classList.add('active')
 				}
-			}, false)
-			document.body.addEventListener('touchmove', function(e){
+			})
+			target_add.addEventListener('touchmove', function(e){
 				
 				var target = e.target
 				var rect = target.getBoundingClientRect()
@@ -68,14 +69,14 @@
 				}
 			})
 			
-			document.body.addEventListener('touchcancel', function(e){
+			target_add.addEventListener('touchcancel', function(e){
 				var target = e.target
 				if(target.dataset.touch === 'true'){
 					target.classList.remove('active')
 				}
 			})
 			
-			document.body.addEventListener('touchend', function(e){
+			target_add.addEventListener('touchend', function(e){
 				var target = e.target
 				if(target.dataset.touch === 'true'){
 					target.classList.remove('active')
