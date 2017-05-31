@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+	<title>bootstarp 示例</title>
+	<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+	<link rel="stylesheet" href="./css/bootstrap.css" type="text/css">
+	<!-- Custom styles for this template -->
+	<link rel="stylesheet" href="./css/index.css" type="text/css">
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	<script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">Brand</a>
+		</div>
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="navbar">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#">Link</a></li>
+				<li><a href="#">Link</a></li>
+				<li><a href="#">Link</a></li>
+				<li><a href="#">Link</a></li>
+				<li><a href="#">Link</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+<div class="banner">
+	<div class="container text-center">
+		<h1 class="text-color">Grow your audience by collecting and sharing the best content online.</h1>
+		<p>Contentstack is the easiest way to display beautiful curated content on your website and social channels. Turn your favourite web links into visually appealing website embeds and social media posts in minutes.</p>
+		<a href="#" class="btn">Start Collecting</a>
+	</div>
+	<img src="http://iph.href.lu/1000x400?fg=ccc" alt="" title="图片占位" class="title-img" />
+</div>
+<hr>
+<div class="wrap text-center">
+	<div class="container">
+		<h2 class="text-color">Time saving and effective</h2>
+		<p>Content marketing is one of the most effective ways to drive traffic, build your brand, generate leads and establish trust with your audience. But it comes at a price. To produce quality, engaging content on a regular basis takes discipline, time and money. For many it's simply not a viable option, until now. Contentstack makes it super easy for those interested in content marketing but without the budgets or resources of the worlds leading brands to use the power of content to engage their audience.</p>
+		<p>Our platform helps you save, share and organise your favourite stories from around the web, turning your bookmarks into the ultimate content marketing tool.</p>
+		<img src="http://iph.href.lu/1000x400?fg=ccc" alt="" title="图片占位" class="title-img" />
+	</div>
+</div>
+<div class="wrap text-center more-wrap">
+	<div class="container">
+		<h3>Generate more leads and build a bigger, more engaged audience through sharing the best content the web has to offer.</h3>
+		<a href="#" class="btn">Start Collecting</a>
+	</div>
+</div>
+<div class="footer">
+	<div class="container">
+		<div class="pull-left">© 2017. All rights reserved.</div>
+		<div class="pull-right">Made by <a href="#">Shaun Weaver</a></div>
+	</div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script>
+	$(function () {
+		var navbar = document.querySelector('.navbar');
+		$(document).scroll(function() {
+			var scrollTop = $(document).scrollTop();
+			if (scrollTop >= 60 && !$(navbar).hasClass('navbar-highlight')) {
+				$(navbar).addClass('navbar-highlight')
+			}
+			if (scrollTop == 0 && $(navbar).hasClass('navbar-highlight')) {
+				$(navbar).removeClass('navbar-highlight');
+			}
+		});
+	});
+</script>
+</body>
+</html>

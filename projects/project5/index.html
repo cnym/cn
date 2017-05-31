@@ -1,105 +1,55 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-	<title>Examples</title>
-	<meta name="description" content="">
-	<meta name="keywords" content="">
-	<link href="" rel="stylesheet">
+	<meta charset="UTF-8">
+	<title>vue demo</title>
 	<style>
-		*{ margin: 0; padding: 0 ; font-size: 14px;}
-		section{ padding: 0 10px }
-		h2{ line-height: 2; font-size: 16px; color: #f00; font-style: normal; }
-		ul{ border-top:1px solid #999; }
-		li{ padding: 1em 0; text-align: center; border-bottom: 1px solid #999;-webkit-tap-highlight-color: #000;}
-		#active li:active{ background: #f0f0f0 }
-		#active2 li:active{ background: #f0f0f0 }
+		html, body, #editor {
+			margin: 0;
+			height: 100%;
+			font-family: 'Helvetica Neue', Arial, sans-serif;
+			color: #333;
+		}
 		
-		[data-touch]{}
-		[data-touch].active{ background: #f0f0f0 }
+		textarea, #editor div {
+			display: inline-block;
+			width: 49%;
+			height: 100%;
+			vertical-align: top;
+			box-sizing: border-box;
+			padding: 0 20px;
+		}
+		
+		textarea {
+			border: none;
+			border-right: 1px solid #ccc;
+			resize: none;
+			outline: none;
+			background-color: #f6f6f6;
+			font-size: 14px;
+			font-family: 'Monaco', courier, monospace;
+			padding: 20px;
+		}
+		
+		code {
+			color: #f66;
+		}
 	</style>
 </head>
 <body>
-<span class="test">test span</span>
-<section touchstart>
-	<h2>:active</h2>
-	<ul id="active">
-		<li>
-			点我
-		</li>
-		<li>
-			点我
-		</li>
-	</ul>
-</section>
-<div class="touchEvent">
-	<section>
-		<h2>:active ios</h2>
-		<ul id="active2">
-			<li>
-				点我
-			</li>
-			<li>
-				点我
-			</li>
-		</ul>
-	</section>
-	<section>
-		<h2>touch事件</h2>
-		<ul id="touch">
-			<li data-touch="true">
-				点我
-			</li>
-			<li data-touch="true">
-				点我
-			</li>
-		</ul>
-	</section>
+<div>
+	虽然可以通过在new Vue实例中添加filters属性实现对内容的过滤，但filters只适用于文本和v-bind绑定的表达式。所以这里为了实现v-html绑定html结构，就用到了计算属性。
+	<div>
+		<a href="http://lodash.think2011.net/debounce">参考防抖动函数(_.debounce)</a>
+	</div>
 </div>
-<script>
-	window.onload = function () {
-		var test = document.querySelector('.test');
-		var target_add = document.querySelector('.touchEvent');
-			target_add.addEventListener('touchstart', function(e){
-				var target = e.target
-				test.innerHTML = target.dataset.touch;
-				if(target.dataset.touch === 'true'){
-					target.classList.add('active')
-				}
-			})
-			target_add.addEventListener('touchmove', function(e){
-				
-				var target = e.target
-				var rect = target.getBoundingClientRect()
-				
-				if(target.dataset.touch === 'true'){
-					// 移出元素时，取消active状态
-					if(e.changedTouches[0].pageX<rect.left || e.changedTouches[0].pageX>rect.right || e.changedTouches[0].pageY<rect.top || e.changedTouches[0].pageY>rect.bottom){
-						target.classList.remove('active')
-					}
-				}
-			})
-			
-			target_add.addEventListener('touchcancel', function(e){
-				var target = e.target
-				if(target.dataset.touch === 'true'){
-					target.classList.remove('active')
-				}
-			})
-			
-			target_add.addEventListener('touchend', function(e){
-				var target = e.target
-				if(target.dataset.touch === 'true'){
-					target.classList.remove('active')
-				}
-			})
-	}
-	
-
-
-</script>
+<div id="editor">
+	<textarea v-bind:value="input" v-on:input="update"></textarea>
+	<div v-html="compiledMarkdown"></div>
+</div>
+<script src="https://unpkg.com/marked@0.3.6"></script>
+<script src="https://unpkg.com/lodash@4.16.0"></script>
+<script src="https://unpkg.com/vue@2.3.3/dist/vue.js"></script>
+<script src="./js/demo.js"></script>
 </body>
 </html>
