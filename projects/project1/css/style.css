@@ -581,6 +581,87 @@ body {
 .ztree { padding: 0; }
 
 
+/*在线咨询*/
+.online-main {
+	position: fixed;
+	top: 30%;
+	right: 0;
+}
+.online-box {
+	position: relative;
+}
+.online-content {
+	position: absolute;
+	top: 0;
+	right: 0;
+	border: 2px solid #0899DA;
+	background-color: #0899DA;
+	z-index: 10;
+	-webkit-transition: all 0.3s ;
+	-moz-transition: all 0.3s ;
+	-ms-transition: all 0.3s ;
+	-o-transition: all 0.3s ;
+	transition: all 0.3s ;
+}
+.online-content.hide {
+	right: -130px;
+}
+.on-c-title {
+	text-align: center;
+	line-height: 38px;
+	height: 38px;
+	color: #fff;
+}
+.on-c-title img {
+	display: inline-block;
+	vertical-align: middle;
+	margin: -4px 0 0;
+}
+.on-c-title .on-c-btn img {
+	margin: -2px 0 0 5px;
+}
+.on-c-body {
+	background-color: #fff;
+	padding: 10px 0;
+	width: 126px;
+}
+.on-c-body img {
+	display: block;
+	margin: 0 auto;
+}
+.on-c-body p {
+	color: #666;
+	line-height: 23px;
+	font-size: 13px;
+	text-align: center;
+	margin-top: 5px;
+}
+.on-c-body a {
+	margin-bottom: 10px;
+	display: block;
+}
+.online-switch {
+	position: absolute;
+	top: 10px;
+	right: -32px;
+	display: block;
+	z-index: 9;
+	background-color: #0899DA;
+	text-align: center;
+	padding: 6px 3px;
+	-webkit-transition: all 0.3s ;
+	-moz-transition: all 0.3s ;
+	-ms-transition: all 0.3s ;
+	-o-transition: all 0.3s ;
+	transition: all 0.3s ;
+	font-size: 14px;
+	color: #fff;
+	width: 32px;
+}
+.online-switch.show {
+	right: 0;
+}
+
 
 .my-video1-dimensions {
 	width: auto;

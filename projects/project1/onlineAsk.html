@@ -1,137 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
-	<title>初级、中级、高级审计师考试网</title>
-	<link rel="stylesheet" href="css/basic.css" type="text/css">
-	<link rel="stylesheet" href="css/style.css" type="text/css">
-	<style>
-		html, body {
-			padding: 0;
-			background-color: transparent;
-		}
-		.online-box {
-			position: relative;
-		}
-		.online-content {
-			position: absolute;
-			top: 0;
-			right: 0;
-			border: 2px solid #0899DA;
-			background-color: #0899DA;
-			z-index: 10;
-			-webkit-transition: all 0.3s ;
-			-moz-transition: all 0.3s ;
-			-ms-transition: all 0.3s ;
-			-o-transition: all 0.3s ;
-			transition: all 0.3s ;
-		}
-		.online-content.hide {
-			right: -130px;
-		}
-		.on-c-title {
-			text-align: center;
-			line-height: 38px;
-			height: 38px;
-			color: #fff;
-		}
-		.on-c-title img {
-			display: inline-block;
-			vertical-align: middle;
-			margin: -4px 0 0;
-		}
-		.on-c-title .on-c-btn img {
-			margin: -2px 0 0 5px;
-		}
-		.on-c-body {
-			background-color: #fff;
-			padding: 10px 0;
-			width: 126px;
-		}
-		.on-c-body img {
-			display: block;
-			margin: 0 auto;
-		}
-		.on-c-body p {
-			color: #666;
-			line-height: 23px;
-			font-size: 13px;
-			text-align: center;
-			margin-top: 5px;
-		}
-		.on-c-body a {
-			margin-bottom: 10px;
-			display: block;
-		}
-		.online-switch {
-			position: absolute;
-			top: 10px;
-			right: -32px;
-			display: block;
-			z-index: 9;
-			background-color: #0899DA;
-			text-align: center;
-			padding: 6px 3px;
-			-webkit-transition: all 0.3s ;
-			-moz-transition: all 0.3s ;
-			-ms-transition: all 0.3s ;
-			-o-transition: all 0.3s ;
-			transition: all 0.3s ;
-			font-size: 14px;
-			color: #fff;
-			width: 32px;
-		}
-		.online-switch.show {
-			right: 0;
-		}
-	</style>
-</head>
-<body>
-<div class="online-box">
-	<div class="online-content">
-		<div class="on-c-title">
-			<img src="./images/customer.png" alt="" title="" width="26" />
+<!--<div class="online-main">-->
+	<div class="online-box">
+		<div class="online-content">
+			<div class="on-c-title">
+				<img src="./images/customer.png" alt="" title="" width="26" />
+				在线客服
+				<a href="javascript:void(0)" class="on-c-btn"><img src="./images/rightOpen.png" alt="" title="" width="15"/></a>
+			</div>
+			<div class="on-c-body">
+				<a href="http://wpa.qq.com/msgrd?v=3&uin=1982090010&site=qq&menu=yes" target="_blank">
+					<img src="./images/button_11.gif" alt="" title="" width="77"/>
+				</a>
+				<a href="http://wpa.qq.com/msgrd?v=3&uin=1425590358&site=qq&menu=yes" target="_blank">
+					<img src="./images/button_11.gif" alt="" title="" width="77"/>
+				</a>
+				<img src="./images/codeImg.jpg" alt="" title="" width="100"/>
+				<p>
+					联系电话：<br />
+					028-68741880
+				</p>
+			</div>
+		</div>
+		<a href="javascript:void(0)" class="online-switch">
+			<img src="./images/customer.png" alt="" title="" width="25" />
 			在线客服
-			<a href="javascript:void(0)" class="on-c-btn"><img src="./images/rightOpen.png" alt="" title="" width="15"/></a>
-		</div>
-		<div class="on-c-body">
-			<a href="http://wpa.qq.com/msgrd?v=3&uin=1982090010&site=qq&menu=yes" target="_blank">
-				<img src="./images/button_11.gif" alt="" title="" width="77"/>
-			</a>
-			<a href="http://wpa.qq.com/msgrd?v=3&uin=1425590358&site=qq&menu=yes" target="_blank">
-				<img src="./images/button_11.gif" alt="" title="" width="77"/>
-			</a>
-			<img src="./images/codeImg.jpg" alt="" title="" width="100"/>
-			<p>
-				联系电话：<br />
-				028-68741880
-			</p>
-		</div>
+		</a>
 	</div>
-	<a href="javascript:void(0)" class="online-switch">
-		<img src="./images/customer.png" alt="" title="" width="25" />
-		在线客服
-	</a>
-</div>
-<script>
-	window.onload = function () {
-		var content = document.querySelector('.online-content');
-		var contentBtn = document.querySelector('.on-c-btn');
-		var switchBtn = document.querySelector('.online-switch');
-		contentBtn.onclick = function () {
-			content.className = 'online-content hide';
-			setTimeout(function () {
-				switchBtn.className = 'online-switch show';
-			}, 300);
-		}
-		switchBtn.onclick =	function () {
-			switchBtn.className = 'online-switch';
-			setTimeout(function () {
-				content.className = 'online-content';
-			}, 300);
-		}
-	}
-</script>
-</body>
-</html>
+<!--</div>-->

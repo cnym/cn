@@ -68,26 +68,4 @@ $(function () {
 	myPlayer2.ready(function(){
 		//myPlayer2.play(); // 这里自动播放
 	});
-	
-	//页面滚动时改变导航条的透明度
-	var navigator = document.getElementById('navigator');
-	var last_known_scroll_position = 0;
-	var ticking = false;
-	$(document).scroll(function () {
-		last_known_scroll_position = $(document).scrollTop();
-		if (!ticking) {
-			window.requestAnimationFrame(function() {
-				controlNavOpacity(last_known_scroll_position);
-				ticking = false;
-			});
-		}
-		ticking = true;
-	})
-	function controlNavOpacity (scrollY) {
-		if (scrollY >= 50 && !$(navigator).hasClass('opacity')) {
-			$(navigator).addClass('opacity')
-		} else if (scrollY < 50 && $(navigator).hasClass('opacity')) {
-			$(navigator).removeClass('opacity')
-		}
-	}
 });
