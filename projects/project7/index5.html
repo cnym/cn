@@ -17,13 +17,15 @@
 <div id="main">
 	<div class="swiper-container">
 		<div class="swiper-wrapper" id="swiperWrapper">
-			<!--<div class="swiper-slide">slider1</div>
-			<div class="swiper-slide">slider2</div>
-			<div class="swiper-slide">slider3</div>-->
+		
 		</div>
 	</div>
 </div>
+<!--<div class="swiper-slide">slider1</div>
+			<div class="swiper-slide">slider2</div>
+			<div class="swiper-slide">slider3</div>-->
 <button id="btn">jump to 第12个slide</button>
+<button id="btn2">jump to 第4个slide</button>
 <script src="zepto.min.js"></script>
 <script src="swiper.js"></script>
 <script>
@@ -57,7 +59,8 @@
 			},*/
 			onSlideChangeEnd: function(swiper){
 				if (!need_refresh) return;//不需要更新
-			    swiper.previousIndex
+			    var previousSlider = swiper.slides[swiper.previousIndex];
+			    sliders_arr[$(previousSlider).data('index')] = previousSlider;
 				//var fTime = new Date().getTime();
 			    //swiper.lockSwipes();
 				var activeIndex = swiper.activeIndex,
@@ -75,8 +78,8 @@
 					for (var k = max_len-temp_prepend_arr.length; k < max_len; k++) {
 						remove_right_slides.push(k);
 					}
-					swiper.removeSlide(remove_right_slides.reverse());//移除数组
-					swiper.prependSlide(temp_prepend_arr);//加进来sliders数组
+					swiper.removeSlide(remove_right_slides);//移除数组
+					swiper.prependSlide(temp_prepend_arr.reverse());//加进来sliders数组
 				} else if (activeIndex+1 == back_point) {
 					if (data_len > end_slide_index+1) {
 						var temp_append_arr = sliders_arr.slice(end_slide_index+1, end_slide_index+btw);//追加到右边的slide数组
@@ -118,6 +121,9 @@
 		$('#btn').click(function(){
 			mySwiper.slideTo(11);
 		});
+			$('#btn2').click(function(){
+				mySwiper.slideTo(3);
+			});
 		
 		//锁定Swiper，阻止其滑动。可以使用 mySwiper.unlockSwipes() 解锁。
 		//mySwiper.wrapper  swiper的wrapper的Dom7/jQuery对象。可以通过mySwiper.wrapper[0]得到wrapper的HTML元素。
