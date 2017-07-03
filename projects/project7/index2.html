@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<link rel="stylesheet" href="swiper.css">
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		#main .swiper-slide {
+			min-height: 300px;
+			text-align: center;
+			line-height: 300px;
+		}
+		#main {
+			margin: 50px;
+			border: 1px solid #ccc;
+		}
+	</style>
+</head>
+<body>
+200
+<a href="./index.html">100 swiper</a>
+<a href="./index2.html">200 swiper</a>
+<a href="./index3.html">300 swiper</a>
+<a href="./index4.html">400 swiper</a>
+<a href="./index5.html">500 swiper</a>
+<div id="main">
+	<div class="swiper-container">
+		<div class="swiper-wrapper" id="swiperWrapper">
+			<div class="swiper-slide">slider1</div>
+			<div class="swiper-slide">slider2</div>
+			<div class="swiper-slide">slider3</div>
+		</div>
+	</div>
+</div>
+<script src="zepto.min.js"></script>
+<script src="swiper.js"></script>
+<script>
+	window.onload = function () {
+		var arr = [];
+		var len = 200;
+	  /*for(var i=0;i<len;i++){
+	   arr.push({id:i+1});
+	   }*/
+		var swiperWrapper = $('#swiperWrapper');
+		var str = '';
+		for(var j=0;j<len;j++){
+			str += '<div class="swiper-slide">slider'+(j+1)+'</div>';
+		}
+		swiperWrapper.html(str);
+		var mySwiper = new Swiper('.swiper-container', {
+			//autoplay: 5000,//可选选项，自动滑动
+		});
+	};
+</script>
+</body>
+</html>
