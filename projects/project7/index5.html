@@ -17,13 +17,15 @@
 <div id="main">
 	<div class="swiper-container">
 		<div class="swiper-wrapper" id="swiperWrapper">
-			<!--<div class="swiper-slide">slider1</div>
-			<div class="swiper-slide">slider2</div>
-			<div class="swiper-slide">slider3</div>-->
+		
 		</div>
 	</div>
 </div>
+<!--<div class="swiper-slide">slider1</div>
+			<div class="swiper-slide">slider2</div>
+			<div class="swiper-slide">slider3</div>-->
 <button id="btn">jump to 第12个slide</button>
+<button id="btn2">jump to 第4个slide</button>
 <script src="zepto.min.js"></script>
 <script src="swiper.js"></script>
 <script>
@@ -48,6 +50,10 @@
 		}
 		var swiperWrapper = $('#swiperWrapper');
 		var mySwiper = new Swiper('.swiper-container', {
+					/*effect:'fade',
+					fade: {
+						crossFade: true,
+					},*/
 			/*onInit: function (swiper) {
 				$('#swiperWrapper').on('change', 'input[type=checkbox].myCheck', function (e) {
 					var curr_slider = swiper.slides[swiper.activeIndex];
@@ -55,41 +61,57 @@
 					sliders_arr[index_of_arr] = curr_slider;
 				});
 			},*/
-			onSlideChangeEnd: function(swiper){
+					onSlideChangeEnd: function(swiper){
+				console.log('in',swiper.activeIndex);
 				if (!need_refresh) return;//不需要更新
-			    swiper.previousIndex
-				//var fTime = new Date().getTime();
-			    //swiper.lockSwipes();
-				var activeIndex = swiper.activeIndex,
-				begin_slide = swiper.slides[0],
-				begin_slide_index = $(begin_slide).data('index'),
-				end_slide = swiper.slides[max_len-1],
-				end_slide_index = $(end_slide).data('index');
-				if (activeIndex+1 == front_point) {
-					if (begin_slide_index == 0) return;
-					var temp_prepend_arr = [];
-					for (var j = begin_slide_index-(btw-1); j < begin_slide_index; j++) {
-						if (j >= 0) temp_prepend_arr.push(sliders_arr[j]);
-					}
-					var remove_right_slides = [];
-					for (var k = max_len-temp_prepend_arr.length; k < max_len; k++) {
-						remove_right_slides.push(k);
-					}
-					swiper.removeSlide(remove_right_slides.reverse());//移除数组
-					swiper.prependSlide(temp_prepend_arr);//加进来sliders数组
-				} else if (activeIndex+1 == back_point) {
-					if (data_len > end_slide_index+1) {
-						var temp_append_arr = sliders_arr.slice(end_slide_index+1, end_slide_index+btw);//追加到右边的slide数组
-						var remove_left_slides = [];//需要移除左边的slide个数
-					  for (var i = 0, iL = temp_append_arr.length; i < iL; i++) {
-						 remove_left_slides.push(i);
-					  }
-					  swiper.appendSlide(temp_append_arr);//加进来sliders数组
-					  swiper.removeSlide(remove_left_slides);//移除数组
-					}
-				}
-				//swiper.unlockSwipes();
-				//console.log(new Date().getTime()-fTime);
+			    //setTimeout(function(){
+				    //var fTime = new Date().getTime();
+				    //swiper.lockSwipes();
+				    var activeIndex = swiper.activeIndex,
+					    begin_slide = swiper.slides[0],
+					    begin_slide_index = $(begin_slide).data('index'),
+					    end_slide = swiper.slides[max_len-1],
+					    end_slide_index = $(end_slide).data('index');
+				    if (activeIndex+1 == front_point) {
+									    //console.log(swiper.activeIndex)
+					    if (begin_slide_index == 0) {
+											    //swiper.unlockSwipes();
+											    return;
+					    };
+					    //var temp_prepend_arr = [];
+					    var temp_prepend_arr_len = 0;
+					    for (var j = begin_slide_index-1 ; j >= begin_slide_index-(btw-1); j--) {
+						    //if (j >= 0) temp_prepend_arr.push(sliders_arr[j]);
+					      if(j >= 0){
+							temp_prepend_arr_len++;
+							swiper.prependSlide(sliders_arr[j]);
+					      }
+					    }
+					    
+									    //swiper.prependSlide(temp_prepend_arr);//加进来sliders数组
+				        //console.log(swiper.activeIndex)
+					    var remove_right_slides = [],
+						temp_len = max_len+temp_prepend_arr_len-1;
+					    for (var k = 0,kL = temp_prepend_arr_len; k < kL; k++) {
+						    remove_right_slides.push(temp_len-k);
+					    }
+					    swiper.removeSlide(remove_right_slides);//移除数组
+				    } else if (activeIndex+1 == back_point) {
+					    if (data_len > end_slide_index+1) {
+						    var temp_append_arr = sliders_arr.slice(end_slide_index+1, end_slide_index+btw);//追加到右边的slide数组
+						    var remove_left_slides = [];//需要移除左边的slide个数
+						    for (var i = 0, iL = temp_append_arr.length; i < iL; i++) {
+							    remove_left_slides.push(i);
+						    }
+											    //console.log(3)
+						    swiper.appendSlide(temp_append_arr);//加进来sliders数组
+						    swiper.removeSlide(remove_left_slides);//移除数组
+											    //console.log(4)
+					    }
+				    }
+				    //swiper.unlockSwipes();
+				    //console.log(new Date().getTime()-fTime);
+			    //},2000)
 			}
 		/*onSlideNextStart:function(swiper){
 		 console.log('onSlideNextStart')
@@ -118,6 +140,9 @@
 		$('#btn').click(function(){
 			mySwiper.slideTo(11);
 		});
+			$('#btn2').click(function(){
+				mySwiper.slideTo(3);
+			});
 		
 		//锁定Swiper，阻止其滑动。可以使用 mySwiper.unlockSwipes() 解锁。
 		//mySwiper.wrapper  swiper的wrapper的Dom7/jQuery对象。可以通过mySwiper.wrapper[0]得到wrapper的HTML元素。
