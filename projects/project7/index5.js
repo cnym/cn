@@ -24,57 +24,27 @@ window.onload = function () {
 		btw = front_point;
 	var need_refresh = false;
 	//初始化swiper
-	var swiperWrapper = $('#swiperWrapper');
 	var init_child_swiper = [],//已经初始化的子swiper
 		init_slide_index = 0,
 	  move_slide_index;
-	swiperWrapper.html(sliders_arr.slice(init_slide_index, max_len).join(''));
-	var mySwiper = new Swiper('#swiperWrapper', {
-		speed: 200,
-		//observer: true,
-		/*effect:'fade',
-		 fade: {
-		 crossFade: true,
-		 },*/
-		/*onInit: function (swiper) {
-		 $('#swiperWrapper').on('change', 'input[type=checkbox].myCheck', function (e) {
-		 var curr_slider = swiper.slides[swiper.activeIndex];
-		 var index_of_arr = $(curr_slider).data('index');
-		 sliders_arr[index_of_arr] = curr_slider;
-		 });
-		 },*/
-		///onSlideChangeStart: function(swiper){
-		//console.log('start',swiper.activeIndex);
-		//swiper.lockSwipes();
-		//setTimeout(function(){swiper.unlockSwipes();},1000);
-		//},
-		/*onTransitionEnd: function(){
-		 console.log(11111)
-		 },*/
+	$('#swiperContainer>.swiper-wrapper').html(sliders_arr.slice(init_slide_index, max_len).join(''));
+	var mySwiper = new Swiper('#swiperContainer', {
+		speed: 0,
 		onInit: function (swiper) {
-			console.log('iii')
+			console.log('init')
 			var child_swiper_id = '#swiper-container'+$(swiper.slides[swiper.activeIndex]).data('index');
 			//初始化子滑块
 			if (init_child_swiper.indexOf(child_swiper_id) == -1 && $(child_swiper_id).length > 0) {
-				var childSwiper = new Swiper(child_swiper_id, {
-					onSlideChangeEnd:function (swiperChild) {
-						console.log('child')
-					}
-				});
+				var childSwiper = new Swiper(child_swiper_id, {});
 				init_child_swiper.push(child_swiper_id);
 			}
 		},
-		/*onTransitionStart: function (swiper) {
-			console.log(swiper.activeIndex);
-			move_slide_index = swiper.activeIndex;
-		},*/
 		onSlideChangeEnd: function(swiper){
+			console.log('in',swiper.activeIndex)
 			var child_swiper_id = '#swiper-container'+$(swiper.slides[swiper.activeIndex]).data('index');
 			//初始化子滑块
 			if (init_child_swiper.indexOf(child_swiper_id) == -1 && $(child_swiper_id).length > 0) {
-				var childSwiper = new Swiper(child_swiper_id, {
-				
-				});
+				var childSwiper = new Swiper(child_swiper_id, {});
 				init_child_swiper.push(child_swiper_id);
 			}
 			
@@ -133,24 +103,6 @@ window.onload = function () {
 			//console.log(new Date().getTime()-fTime);
 			//},2000)
 		}
-		/*onSlideNextStart:function(swiper){
-		 console.log('onSlideNextStart')
-		 },
-		 onSlidePrevStart:function(swiper){
-		 console.log('onSlidePrevStart')
-		 },
-		 onTransitionStart:function(swiper){
-		 console.log(swiper.slides[0])
-		 },
-		 onReachBeginning:function(swiper){
-		 console.log('切换到初始位置触发')
-		 },
-		 onReachEnd:function(){
-		 console.log('切换到最后一个slide执行')
-		 },
-		 onDestroy:function(){
-		 console.log('销毁swiper');
-		 },*/
 	});
 	
 	if (data_len > max_len) {
